@@ -1,0 +1,39 @@
+@import '../../../style/module/global';
+
+.header-bar {
+  @include rowBetween;
+  width: 100%;
+  height: vw(75);
+  padding: 0 vw(24);
+  font-size: vw($text-size-level-2);
+  background: white;
+
+  .title {
+    @include ellipsis;
+    width: vw(400);
+    text-align: center;
+  }
+
+  .left,.right {
+    @include ellipsis;
+    width: vw(150);
+    font-size: vw($text-size-level-3);
+  }
+
+  .right {
+    @include right;
+  }
+
+  .left {
+    .icon-back {
+      font-weight: bold;
+    }
+  }
+
+  .half-border {
+    @include halfBorder(absolute);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

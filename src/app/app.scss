@@ -1,0 +1,10 @@
+@import "../style/module/global";
+
+.App {
+  @include cover;
+  overflow: hidden;
+
+  #audio {
+    display: none;
+  }
+}

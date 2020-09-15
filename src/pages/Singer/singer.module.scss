@@ -1,0 +1,80 @@
+@import "../../style/module/global";
+
+.singer {
+  .header-bar {
+    position: relative;
+    z-index: 3;
+  }
+
+  .filter-container {
+    position: relative;
+    z-index: 2;
+    padding: vw(12) 0;
+    background: white;
+    box-shadow: 0 0 5px #eee;
+
+    .filter-list {
+      @include left;
+      height: vw(55);
+      line-height: vw(55);
+
+      li {
+        padding: 0 vw(12);
+        font-size: vw($text-size-level-3);
+
+        &.act {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+
+  .scroll {
+    @include fullScreen(vw(210), 0, 0, 0);
+
+    .singer-title {
+      padding: 0 vw(24);
+      font-size: vw($text-size-level-4);
+      line-height: vw(55);
+    }
+
+    .singer-list {
+      background: white;
+
+      .singer-list-item {
+        @include rowBetween;
+        padding: vw(24);
+
+        .singer-info {
+          @include left;
+
+          .singer-pic {
+            @include cover(vw(100));
+            margin-right: vw(24);
+            border-radius: vw(50);
+          }
+
+          .singer-name {
+            @include ellipsis;
+            width: vw(400);
+            font-size: vw($text-size-level-3);
+
+            .singer-alias {
+              color: $text-level-two-color;
+            }
+          }
+        }
+      }
+
+      .follow {
+        @include center;
+        width: vw(150);
+        height: vw(55);
+        font-size: vw($text-size-level-3);
+        color: $theme-color;
+        border: 1px solid $theme-color;
+        border-radius: vw(30);
+      }
+    }
+  }
+}

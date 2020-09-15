@@ -1,0 +1,43 @@
+@import "./standard";
+@mixin extendClick($position: relative, $px:-10px) {
+  position: $position;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: $px;
+    right: $px;
+    bottom: $px;
+    left: $px;
+  }
+}
+
+@mixin cover ($vw:100%) {
+  width: $vw;
+  height: $vw;
+}
+
+@mixin ellipsis2($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

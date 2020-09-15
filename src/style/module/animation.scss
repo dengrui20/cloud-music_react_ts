@@ -1,0 +1,158 @@
+@import "./function";
+
+
+@mixin fadeAnimtaionByDispaly {
+  &[class*="fade-enter"] {
+    display: block;
+    opacity: 0;
+  }
+  &[class*="fade-enter-active"] {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-enter-done"] {
+    display: block;
+    opacity: 1;
+  }
+
+  &[class*="fade-exit"] {
+    display: block;
+    opacity: 1;
+  }
+  &[class*="fade-exit-active"] {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-exit-done"] {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@mixin fadeAnimtaionByZindex($showIndex) {
+  &[class*="fade-enter"] {
+    z-index: $showIndex;
+    opacity: 0;
+  }
+  &[class*="fade-enter-active"] {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-enter-done"] {
+    z-index: $showIndex;
+    opacity: 1;
+  }
+
+  &[class*="fade-exit"] {
+    z-index: 0;
+    opacity: 1;
+  }
+  &[class*="fade-exit-active"] {
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-exit-done"] {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+@mixin showCDanimation {
+  &[class*="showcd-enter"] {
+    transform: scale(0);
+    border-radius: vw(300);
+  }
+  
+  &[class*="showcd-enter-active"] {
+    transform: scale(1);
+    border-radius: vw(0);
+    transition: all 0.5s ease;
+  }
+
+  &[class*="showcd-enter-done"] {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: vw(0);
+  }
+
+  &[class*="showcd-exit"] {
+    transform: scale(1) translateX(0);
+  }
+  &[class*="showcd-exit-active"] {
+    transform: scale(1) translateX(120%);
+    transition: all 0.5s ease;
+  }
+
+  &[class*="showcd-exit-done"] {
+    transform: scale(0)
+  }
+}
+
+@mixin fadeAnimtaionByZindex($showIndex) {
+  &[class*="fade-enter"] {
+    z-index: $showIndex;
+    opacity: 0;
+  }
+  &[class*="fade-enter-active"] {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-enter-done"] {
+    z-index: $showIndex;
+    opacity: 1;
+  }
+
+  &[class*="fade-exit"] {
+    z-index: 0;
+    opacity: 1;
+  }
+  &[class*="fade-exit-active"] {
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  &[class*="fade-exit-done"] {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+@mixin moveToTopAnimtaion {
+  &[class*="moveTop-enter"] {
+    display: block;
+    transform: translateX(-50%) translateY(100%);
+  }
+  &[class*="moveTop-enter-active"] {
+    transition: all 0.3s linear;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  &[class*="moveTop-enter-done"] {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  &[class*="moveTop-exit"] {
+    display: block;
+    transform: translateX(-50%) translateY(0);
+  }
+  &[class*="moveTop-exit-active"] {
+    display: block;
+    transform: translateX(-50%) translateY(100%);
+    transition: all 0.3s linear;
+  }
+
+  &[class*="moveTop-exit-done"] {
+    display: none;
+    transform: translateX(-50%) translateY(100%);
+  }
+}

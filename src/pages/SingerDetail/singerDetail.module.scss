@@ -1,0 +1,37 @@
+@import "../../style/module/global.scss";
+
+.singer-detail {
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+  }
+
+  .singer-cover {
+    @include center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: vw(750);
+    height: vw(562);
+    transform-origin: center top;
+
+    &::after {
+      content: '';
+      @include cover;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .scroll {
+    @include fullScreen(vw(75), 0, 0, 0);
+    overflow: hidden;
+
+    .song-list {
+      padding-top: vw(485);
+    }
+  }
+}

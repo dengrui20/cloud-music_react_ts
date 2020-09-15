@@ -1,0 +1,94 @@
+@import "../../style/module/global.scss";
+
+.album-detail {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+  }
+
+  .bg-blur {
+    width: 100%;
+    height: vw(550);
+    background-size: 120% auto;
+    filter: blur(30px);
+  }
+
+  .collect {
+    @include center;
+    width: vw(200);
+    height: vw(75);
+    margin-right: vw(24);
+    font-size: vw($text-size-level-3);
+    color: white;
+    background: $theme-gradient-color-toRight;
+    border-radius: vw(50);
+    box-shadow: 0 0 5px $theme-color;
+  }
+
+  .scroll {
+    @include fullScreen(vw(75), 0, 0, 0);
+    overflow: hidden;
+   
+    .song-list {
+      padding-top: vw(0);
+
+      .album-info {
+        @include center;
+        position: relative;
+        width: 100%;
+        height: vw(500);
+  
+        .album-cover {
+          position: relative;
+          @include cover(vw(240));
+
+          .play-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: vw(5) vw(12);
+            color: white;
+            font-size: vw($text-size-level-4);
+
+            i {
+              font-size: vw($text-size-level-3);
+              margin-right: vw(6);
+            }
+          }
+  
+          img {
+            @include cover;
+          }
+        }
+  
+        .info-desc {
+          width: vw(400);
+          margin-left: vw(24);
+  
+          .album-name {
+            @include ellipsis2(2);
+            margin-bottom: vw(24);
+            font-size: vw($text-size-level-2);
+            line-height: vw(50);
+            color: white;
+          }
+  
+          .person {
+            @include left;
+            font-size: vw(28);
+            color: #f5f5f5;
+  
+            .avatar {
+              @include cover(vw(50));
+              margin-right: vw(24);
+              border-radius: vw(30);
+            }
+          }
+        }
+      }
+    }
+  }
+}

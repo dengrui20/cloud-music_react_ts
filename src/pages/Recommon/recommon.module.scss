@@ -1,0 +1,169 @@
+@import "../../style/module/global";
+
+.recommon {
+  .wrap {
+    @include fullScreen(0, 0, 0, 0, fixed);
+
+    .scroll-container {
+      padding: vw(100) vw(24) 0;
+    }
+
+    .banner-list {
+      width: 90%;
+      height: vw(230);
+      margin-top: vw(24);
+      border-radius: vw(16);
+      box-shadow: 0 0 5px #ccc;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .module-title {
+      width: 100%;
+      margin: vw(36) 0 vw(24);
+      font-size: vw($text-size-level-2);
+      font-weight: bold;
+    }
+
+    .theme {
+      @include left;
+      padding: vw(24);
+
+      li {
+        width: vw(120);
+        margin-right: vw(24);
+
+        .img-container {
+          @include cover(vw(120));
+          @include center;
+          background: $theme-gradient-color-toLeft;
+          border-radius: vw(120);
+
+          img {
+            width: 60%;
+          }
+        }
+
+        .text {
+          @include ellipsis;
+          width: 100%;
+          box-sizing: border-box;
+          padding: vw(12) vw(6);
+          font-size: vw($text-size-level-3);
+          color: $text-level-two-color;
+          text-align: center;
+        }
+      }
+    }
+
+    .recommon-list {
+      @include left;
+      flex-wrap: nowrap;
+      width: 100%;
+      height: vw(290);
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+
+      .recommon-list-item {
+        width: vw(200);
+        margin-right: vw(24);
+
+        .song-cover {
+          @include cover(vw(200));
+          position: relative;
+          overflow: hidden;
+          border-radius: vw(6);
+
+          .listen-num {
+            @include center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: vw(6) vw(12);
+            font-size: vw($text-size-level-5);
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: vw(12);
+
+            .icon-listen {
+              margin-right: vw(6);
+              font-size: vw(16);
+            }
+          }
+
+          .icon-play {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: vw(12);
+            font-size: vw(40);
+            color: white;
+          }
+
+          img {
+            @include cover;
+          }
+        }
+
+        .song-desc {
+          @include ellipsis2(2);
+          height: vw(68);
+          margin: vw(12) 0 0;
+          font-size: vw(22);
+          line-height: vw(35);
+          color: $text-level-two-color;
+        }
+      }
+    }
+
+    .new-song-list {
+      @include columnTop;
+      width: 100%;
+
+      .new-song-list-item {
+        @include rowBetween;
+        @include halfBorder(relative);
+        width: 100%;
+        padding: vw(12);
+
+        .song-info {
+          width: vw(650);
+
+          .song-name {
+            @include ellipsis;
+            margin-bottom: vw(12);
+            font-size: vw($text-size-level-2);
+
+            .song-alias {
+              color: $text-level-two-color;
+            }
+          }
+
+          .song-artist {
+            @include ellipsis;
+            font-size: vw($text-size-level-4);
+            color: $text-level-two-color;
+          }
+        }
+
+        .icon-play {
+          font-size: vw(45);
+          color: $text-level-three-color;
+        }
+      }
+    }
+
+    .bottom-tip {
+      @include textCenter(vw(75));
+      font-size: vw($text-size-level-3);
+      color: $text-level-three-color;
+    }
+  }
+}

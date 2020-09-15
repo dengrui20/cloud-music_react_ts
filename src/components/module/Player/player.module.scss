@@ -1,0 +1,302 @@
+@import "../../../style//module/global.scss";
+
+.player {
+  .mini-player {
+    @include cover(vw(60));
+    @include center;
+    position: relative;
+
+    .circel {
+      @include cover;
+      position: absolute;
+      transform: rotateZ(-90deg);
+    }
+
+    .cover {
+      @include cover(vw(50));
+      border-radius: vw(25);
+      animation: cdRotate linear 20s infinite;
+    }
+  }
+}
+
+.player-detail {
+  @include fullScreen(0, 0, 0, 0, fixed);
+  @include showCDanimation;
+  z-index: 100;
+  background-color: #ccc;
+  transform: scale(0);
+
+  .blur-bg {
+    @include fullScreen;
+    background-position: center;
+    background-size: auto 150%;
+    filter: blur(40px) brightness(80%);
+  }
+
+  .header {
+    @include rowBetween;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 100%;
+    height: vw(100);
+    padding: 0 vw(24);
+    font-size: vw($text-size-level-2);
+    color: white;
+
+    i {
+      font-size: vw(45);
+    }
+
+    .song-info {
+      @include columnCenter;
+      width: vw(500);
+
+      span {
+        @include ellipsis;
+        width: 100%;
+        text-align: center;
+      }
+
+      .singer {
+        margin-top: vw(6);
+        font-size: vw($text-size-level-4);
+      }
+    }
+  }
+
+  .cd-container {
+    @include fullScreen(vw(100), 0, vw(230), 0);
+    @include fadeAnimtaionByZindex(20);
+    overflow: hidden;
+
+    .cd-needle {
+      position: absolute;
+      z-index: 1;
+      top: vw(25);
+      left: 50%;
+      width: vw(200);
+      transition: transform linear 0.3s;
+      transform-origin: vw(35) vw(30);
+      transform: rotateZ(-30deg);
+
+      &.isPlaying {
+        transform: rotateZ(0deg);
+      }
+    }
+
+    .cd-circle {
+      @include cover(vw(600));
+      @include center;
+      position: absolute;
+      top: vw(160);
+      left: 50%;
+      overflow: hidden;
+      margin-left: vw(-300);
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.1) url("./img/cd.png") no-repeat center center;
+      background-size: 90%;
+      border-radius: vw(300);
+      animation: cdRotate linear 20s infinite;
+
+      .cd-cover {
+        width: 65%;
+        border-radius: vw(300);
+      }
+    }
+  }
+
+  .player-controller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: vw(230);
+
+    .process-container {
+      @include rowBetween;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 vw(24);
+      font-size: vw(20);
+      color: white;
+
+      .process {
+        @include left;
+        position: relative;
+        width: vw(550);
+        height: vw(5);
+        background: rgba(255, 255, 255, 0.15);
+
+        .progress {
+          width: 0;
+          height: vw(5);
+          background: rgba(255, 255, 255, 0.6);
+          border-radius: vw(5);
+        }
+
+        .progress-btn {
+          @include cover(vw(30));
+          @include extendClick(absolute);
+          left: 0;
+          background: white;
+          border-radius: vw(20);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .controller-btn {
+      @include rowBetween;
+      height: vw(100);
+
+      i {
+        width: 20%;
+        font-size: vw(50);
+        text-align: center;
+        color: white;
+
+        &.play-btn {
+          font-size: vw(80);
+        }
+      }
+    }
+  }
+
+  .play-list-mask {
+    @include fullScreen;
+    z-index: 25;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    @include fadeAnimtaionByDispaly;
+  }
+
+  .play-list {
+    position: absolute;
+    left: 50%;
+    bottom: vw(24);
+    z-index: 30;
+    box-sizing: border-box;
+    width: vw(686);
+    padding: 0 vw(24);
+    color: #333;
+    background: white;
+    border-radius: vw(16);
+    display: none;
+    @include moveToTopAnimtaion;
+
+    .play-list-title {
+      line-height: vw(100);
+      font-size: vw($text-size-level-2);
+    }
+
+    .operation {
+      @include rowBetween;
+
+      .play-mode {
+        font-size: vw($text-size-level-3);
+        margin-bottom: vw(12);
+      }
+
+      .delete-all {
+        font-size: vw(40);
+      }
+    }
+
+    .scroll {
+      @include halfBorder;
+      height: vw(750);
+      overflow: hidden;
+
+      .song-list {
+        .song {
+          @include rowBetween;
+          @include halfBorder;
+          height: vw(75);
+          font-size: vw($text-size-level-3);
+
+          .song-name {
+            @include ellipsis;
+            @include left;
+            width: vw(550);
+            height: 100%;
+
+            .iconfont {
+              margin-right: vw(12);
+              display: none;
+            }
+          }
+
+          &.current {
+            .song-name {
+              color: red;
+            }
+
+            .iconfont {
+              display: inline-block;
+            }
+          }
+
+          .delete {
+            @include extendClick;
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .close {
+      font-size: $text-size-level-2;
+      text-align: center;
+      line-height: vw(75);
+    }
+  }
+
+  .lyric-list-container {
+    @include fullScreen(vw(100), 0, vw(250), 0);
+    overflow: hidden;
+    padding: vw(50);
+    opacity: 0;
+    @include fadeAnimtaionByZindex(20);
+
+    .lyric-list {
+      @include columnTop;
+      width: 100%;
+      min-height: 100%;
+      padding-top: vw(200);
+      font-size: vw($text-size-level-3);
+      line-height: vw(60);
+      text-align: center;
+      color: white;
+
+      .lyric-list-item {
+        opacity: 0.5;
+        width: 100%;
+        display: block;
+        white-space: normal;
+        text-align: center;
+
+        &.active {
+          font-size: vw($text-size-level-2);
+          font-weight: bold;
+          opacity: 1;
+        }
+
+        &.not-lyric {
+          @include cover;
+        }
+      }
+    }
+  }
+}
+
+@keyframes cdRotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,31 @@
+//  主题变量
+
+/*    颜色   */
+
+// 风格主色调
+$theme-color: #eb3d2d;
+// 风格副色调
+$theme-sub-color: #ec6554;
+// 渐变色用于tab栏 图标等
+$theme-gradient-color-toRight: linear-gradient(to right, $theme-color, $theme-sub-color);
+$theme-gradient-color-toLeft: linear-gradient(to left, $theme-color, $theme-sub-color);
+$theme-gradient-color-toBottom: linear-gradient(to bottom, $theme-color, $theme-sub-color);
+$theme-gradient-color-toTop: linear-gradient(to top, $theme-color, $theme-sub-color);
+
+// 用于正文 标题
+$text-level-one-color: #333;
+// 用于副标题
+$text-level-two-color: #666;
+//  用于次级信息 如日期更多入口 禁用按钮
+$text-level-three-color: #adadad;
+//  用于分割线
+$split-border-color: #ededed;
+// 用于视图背景
+$view-bg-color: #f5f5f5;
+
+/*    字体大小     */
+$text-size-level-1: 36;
+$text-size-level-2: 32;
+$text-size-level-3: 28;
+$text-size-level-4: 24;
+$text-size-level-5: 22;

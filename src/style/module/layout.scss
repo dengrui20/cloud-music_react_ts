@@ -1,0 +1,100 @@
+@mixin fullScreen($t:0,$r:0,$b:0,$l:0,$p:absolute) {
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin rowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin colAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin colBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin columnTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin columnLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin columnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin marginCenter($width:auto) {
+  display: block;
+  width: $width;
+  margin: auto;
+}
+
+@mixin textCenter($height:1rem) {
+  height: $height;
+  line-height: $height;
+  text-align: center;
+}
+
+@mixin posRowCenter() {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@mixin posColCenter() {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}

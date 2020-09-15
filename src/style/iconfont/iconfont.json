@@ -1,0 +1,135 @@
+{
+  "id": "1762568",
+  "name": "网易云音乐",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8605720",
+      "name": "广播信息",
+      "font_class": "guangboxinxi",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "7275336",
+      "name": "Close",
+      "font_class": "Close",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "1433820",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "10917767",
+      "name": "play-list-line",
+      "font_class": "play-list-line",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "4237150",
+      "name": "暂停",
+      "font_class": "-controller_play",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "7408040",
+      "name": "暂停",
+      "font_class": "controller_pause",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "781701",
+      "name": "上一曲1-01",
+      "font_class": "-prev_song",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "781774",
+      "name": "下一曲1-01",
+      "font_class": "-next_song",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "1488903",
+      "name": "随机",
+      "font_class": "-random_play",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "2154282",
+      "name": "循环播放_32",
+      "font_class": "-loop_play",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "2154283",
+      "name": "单曲循环_32",
+      "font_class": "-single_play",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "10331229",
+      "name": "icon-arrow-left",
+      "font_class": "-arrow-left",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5723603",
+      "name": "alter_delete",
+      "font_class": "-delete",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3150746",
+      "name": "listen",
+      "font_class": "-listen",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "6759846",
+      "name": "play",
+      "font_class": "-play-fill",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "7015393",
+      "name": "arraw-02",
+      "font_class": "-arrow-right",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "9580361",
+      "name": "play",
+      "font_class": "-play",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "10318793",
+      "name": "search",
+      "font_class": "-search",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

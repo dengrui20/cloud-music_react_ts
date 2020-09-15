@@ -1,0 +1,69 @@
+@import "../../../style/module/global.scss";
+
+.album-list-container {
+  width: 100%;
+  overflow: hidden;
+  border-top-right-radius: vw(16);
+  border-top-left-radius: vw(16);
+
+  .container-header {
+    @include rowBetween;
+    @include halfBorder;
+    width: 100%;
+    height: vw(100);
+    padding-left: vw(24);
+    font-size: vw($text-size-level-2);
+    background: white;
+
+    .header-left {
+      @include left;
+
+      i {
+        margin-right: vw(6);
+        font-size: vw(40);
+      }
+
+      .song-num {
+        font-size: vw($text-size-level-4);
+        color: $text-level-three-color;
+      }
+    }
+  }
+
+  .song-list {
+    background: white;
+
+    .song-list-item {
+      @include rowBetween;
+
+      .song-index {
+        @include center;
+        width: vw(120);
+        font-size: vw($text-size-level-1);
+      }
+
+      .song {
+        @include columnLeft;
+        @include halfBorder;
+        box-sizing: border-box;
+        width: vw(630);
+        padding: vw(24) vw(12);
+
+        div {
+          @include ellipsis;
+          width: 100%;
+
+          &.song-name {
+            margin-bottom: vw(12);
+            font-size: vw($text-size-level-2);
+          }
+
+          &.song-artist {
+            font-size: vw($text-size-level-4);
+            color: $text-level-three-color;
+          }
+        }
+      }
+    }
+  }
+}
